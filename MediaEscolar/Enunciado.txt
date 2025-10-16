@@ -1,0 +1,9 @@
+2. **Implemente os Métodos:**
+    - Crie um **Getter** para o `nome` e a `situacao`.
+    - Crie um **Setter** para as `notas` (um array de *doubles*).
+    - Crie um método público chamado **`calculaMedia()`** que **não retorna nada** (`void`):
+        - Dentro dele, use um laço de repetição para calcular a média das notas.
+        - Ao final do cálculo, use uma **estrutura condicional** (`if/else if/else` ou *ternário*) para definir a `situacao`:
+            - Média ≥7.0: Atribua "Aprovado" ao atributo `situacao`.
+            - Média ≥5.0 e <7.0: Atribua "Recuperação" ao atributo `situacao`.
+            - Média <5.0: Atribua "Reprovado" ao atributo `situacao`.
