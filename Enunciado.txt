@@ -1,0 +1,65 @@
+## Desafio: Sistema de Cadastro de Livros (Versão 2.0 - Encapsulamento e Arrays)
+
+O objetivo continua sendo a classe `Livro`, mas agora com regras estritas de encapsulamento.
+
+### 1. Requisitos da Classe `Livro`
+
+### Atributos (Propriedades)
+
+Os atributos devem ser os mesmos, mas **TODOS** devem ser declarados como **`private`** (Encapsulamento):
+
+- `private String titulo;`
+- `private String autor;`
+- `private int anoPublicacao;`
+- `private boolean disponivel;`
+
+### Construtor Único
+
+Você deve criar apenas **UM construtor** completo que inicializa todos os atributos:
+
+Java
+
+`public Livro(String titulo, String autor, int anoPublicacao)`
+
+*(Lembre-se: `disponivel` deve ser `true` por padrão e não precisa ser passado no construtor.)*
+
+### Métodos de Acesso (Getters & Setters)
+
+1. **Getters:** Crie um método `public` de acesso (`get`) para **TODOS** os atributos (`titulo`, `autor`, `anoPublicacao`, `disponivel`).
+2. **Setters:** Crie um método `public` de modificação (`set`) apenas para o **Título** e o **Ano de Publicação**. Não permita que o `Autor` seja alterado após a criação, e o `disponivel` será alterado apenas pelo método `emprestar()` (veja abaixo).
+
+| **Atributo** | **Getter** | **Setter (Permitido?)** |
+| --- | --- | --- |
+| `titulo` | Sim | Sim |
+| `autor` | Sim | Não |
+| `anoPublicacao` | Sim | Sim |
+| `disponivel` | Sim | Não (Apenas `emprestar()` muda) |
+
+### Métodos Funcionais
+
+1. **`exibirDetalhes()`:** (Mesmo do desafio anterior).
+2. **`emprestar()`:** (Mesmo do desafio anterior).
+3. **`devolver()`:** Crie um novo método que muda o status `disponivel` para `true`. Deve verificar se o livro já não está disponível e imprimir a mensagem adequada.
+
+---
+
+### 2. Classe Principal (`AcervoManager`) - Trabalhando com Arrays
+
+Crie uma classe de teste (ex: `AcervoManager`) e use o método `main` para simular o gerenciamento de um acervo usando **Arrays de objetos**:
+
+1. **Criação do Array:** Declare um `Array` de objetos `Livro` com capacidade para 3 livros.Java
+    
+    `Livro[] acervo = new Livro[3];`
+    
+2. **Preenchimento do Array:** Instancie 3 novos objetos `Livro` (usando o seu construtor único) e armazene cada um em uma posição diferente do array `acervo`.
+3. **Iteração e Exibição:** Use um loop **`for`** (pode ser o `for-each`) para percorrer o array `acervo` e chame o método `exibirDetalhes()` para cada livro.
+4. **Uso de Setters:**
+    - Acesse o livro na posição 1 do array.
+    - Use o **Setter** para mudar o `anoPublicacao` para `2000`.
+    - Use o **Setter** para mudar o `titulo` para `"Novo Título Atualizado"`.
+5. **Testando Getters e Métodos:**
+    - Acesse o livro na posição 2 do array.
+    - Chame o método `emprestar()`.
+    - Imprima no console o **Título** e o **Status de Disponibilidade** desse livro, **OBRIGATORIAMENTE** usando os métodos **Getters**.
+    - Chame o método `devolver()`.
+    - Imprima novamente o **Título** e o **Status de Disponibilidade** usando os **Getters** para provar que a devolução funcionou.
