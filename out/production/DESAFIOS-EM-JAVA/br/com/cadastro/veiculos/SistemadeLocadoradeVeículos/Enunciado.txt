@@ -1,0 +1,40 @@
+## **Desafio em Java: Sistema de Gerenciamento de Veículos**
+
+### 🎯 **Objetivo**
+
+Desenvolver um sistema que gerencie veículos de uma concessionária, aplicando **herança**, **encapsulamento**, **sobrescrita de métodos** e **polimorfismo**.
+
+---
+
+### 🧱 **Descrição do Desafio**
+
+A concessionária vende diferentes tipos de veículos (carros, motos e caminhões).
+
+O sistema deve permitir cadastrar veículos, exibir suas informações e calcular um **valor final de venda**, considerando taxas ou descontos específicos para cada tipo.
+
+---
+
+### 🧩 **Requisitos obrigatórios**
+
+1. **Classe base (`Veiculo`)**
+    - Atributos privados: `marca`, `modelo`, `ano`, `precoBase`.
+    - Métodos:
+        - Getters e setters para todos os atributos.
+        - Um método `exibirInfo()` para mostrar os dados principais.
+        - Um método `calcularValorFinal()` que retorna o preço base (será sobrescrito nas subclasses).
+2. **Classe derivada (`Carro`)**
+    - Atributo adicional: `qtdPortas`.
+    - O valor final do carro deve adicionar **5% de taxa administrativa** sobre o preço base.
+    - Sobrescreva o método `calcularValorFinal()`.
+3. **Classe derivada (`Moto`)**
+    - Atributo adicional: `cilindrada`.
+    - O valor final deve adicionar **3% de taxa** se a cilindrada for acima de 500.
+    - Sobrescreva o método `calcularValorFinal()`.
+4. **Classe derivada (`Caminhao`)**
+    - Atributo adicional: `capacidadeCarga` (em toneladas).
+    - O valor final deve adicionar **10% de taxa** se a capacidade for acima de 10 toneladas.
+    - Sobrescreva o método `calcularValorFinal()`.
+5. **Classe principal (`Main`)**
+    - Deve criar objetos de diferentes tipos de veículos.
+    - Exibir suas informações e o valor final calculado.
+    - Utilizar **polimorfismo**, manipulando os objetos como `Veiculo`.

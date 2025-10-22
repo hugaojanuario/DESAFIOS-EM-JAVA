@@ -16,7 +16,7 @@ public class MainTest {
         System.out.println("------------");
         Moto moto = new Moto(501);
         moto.setMarca("Honda");
-        moto.setModelo("CB 350");
+        moto.setModelo("CB 35000");
         moto.setPrecoBase(2900);
         moto.setAno(2009);
         moto.calcularValorFInal();
