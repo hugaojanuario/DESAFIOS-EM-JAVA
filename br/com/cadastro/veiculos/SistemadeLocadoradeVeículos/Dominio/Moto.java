@@ -8,6 +8,7 @@ public class Moto extends Veiculo{
     }
 
     public void exibirMoto(){
+        System.out.println("---DETALHES MOTO---");
         exibirInfo();
         System.out.println("Cilindradas: "+ this.cilindrada);
         System.out.println("Valor apos a taxa de 3%: "+calcularValorFInal());

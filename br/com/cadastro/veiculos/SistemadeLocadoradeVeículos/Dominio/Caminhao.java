@@ -8,6 +8,7 @@ public class Caminhao extends Veiculo{
     }
 
     public void exibirCaminhao(){
+        System.out.println("---DETALHES CAMINHÂO---");
         exibirInfo();
         System.out.println("Capacidade em KG da Carga: "+this.capacidadeCargaKg);
         System.out.println("Valor apos a taxa de 10%: "+calcularValorFInal());

@@ -13,15 +13,13 @@ public class MainTest {
         carro.setAno(2025);
         carro.calcularValorFInal();
         carro.exibirCarro();
-        System.out.println("------------");
         Moto moto = new Moto(501);
         moto.setMarca("Honda");
-        moto.setModelo("CB 35000");
+        moto.setModelo("CB 350");
         moto.setPrecoBase(2900);
         moto.setAno(2009);
         moto.calcularValorFInal();
         moto.exibirMoto();
-        System.out.println("-------------");
         Caminhao caminhao = new Caminhao(5000000);
         caminhao.setMarca("Scannia");
         caminhao.setModelo("879BG");
