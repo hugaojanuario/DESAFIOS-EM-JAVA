@@ -2,6 +2,7 @@ package br.com.cadastro.veiculos.SistemadeLocadoradeVeículos.Teste;
 
 import br.com.cadastro.veiculos.SistemadeLocadoradeVeículos.Dominio.Caminhao;
 import br.com.cadastro.veiculos.SistemadeLocadoradeVeículos.Dominio.Carro;
+import br.com.cadastro.veiculos.SistemadeLocadoradeVeículos.Dominio.Menu;
 import br.com.cadastro.veiculos.SistemadeLocadoradeVeículos.Dominio.Moto;
 
 public class MainTest {
@@ -19,8 +20,6 @@ public class MainTest {
         moto.setModelo("CB 350");
         moto.setPrecoBase(2900);
         moto.setAno(2009);
-        moto.calcularValorFInal();
-        moto.exibirMoto();
         System.out.println("-------------");
         Caminhao caminhao = new Caminhao(5000000);
         caminhao.setMarca("Scannia");
@@ -29,9 +28,6 @@ public class MainTest {
         caminhao.setAno(2025);
         caminhao.calcularValorFInal();
         caminhao.exibirCaminhao();
-
-
-
 
     }
 
