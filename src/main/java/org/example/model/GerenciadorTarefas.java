@@ -3,12 +3,48 @@ package org.example.model;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Scanner;
 
 public class GerenciadorTarefas {
     private List<Tarefa> tarefas;
 
+
     public GerenciadorTarefas() {
         this.tarefas = new ArrayList<>();
+    }
+
+    public void menu(){
+        Scanner scan = new Scanner (System.in);
+
+        while(true){
+            System.out.println("""
+                    **MENU**
+                    escolha uma opcao: 
+                    1. Adicionar.
+                    2. Remover.
+                    3. Concluir.
+                    4. Listar.
+                    5. Sair.
+                    """);
+            int opc = scan.nextInt();
+
+            if (opc == 1){
+                System.out.println("Informe a descricao da tarefa: ");
+                String descricaoLida = scan.nextLine();
+                System.out.println("Informe o nivel de prioridade: ");
+                int prioridadeLida = scan.nextInt();
+                adicionarTarefas(descricaoLida, prioridadeLida);
+
+            }else if (opc == 2){
+                System.out.println("Informe o indice que deseja remover: ");
+                int indiceLida = scan.nextInt();
+                removerTarefas(indiceLida);
+
+            }else if (opc == 3){
+            }
+
+        }
+
     }
 
     public void adicionarTarefas(String descricao, int prioridade){
